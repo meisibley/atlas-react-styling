@@ -3,11 +3,13 @@ import SongTitle from "./SongTitle";
 import PlayControls from "./PlayControls";
 import VolumeControl from "./VolumeControl";
 
-export default function CurrentlyPlaying() {
-  return <div>
+export default function CurrentlyPlaying({ song, artist }) {
+  return (
+    <div>
       <CoverArt />
-      <SongTitle />
+      <SongTitle title={song ? song.title : 'No Song Playing'} artist={song.artist}/>
       <PlayControls />
       <VolumeControl />
     </div>
+  );
 }
