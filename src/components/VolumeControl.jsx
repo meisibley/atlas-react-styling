@@ -1,5 +1,5 @@
-import volumeControl from "../../images/volume-control.png";
+import volumeControl from "../../images/volume-control1.png";
 
 export default function VolumeControl() {
-    return <div><img src={volumeControl} /></div>
+    return <div><img src={volumeControl} className="my-4" /></div>
 }
