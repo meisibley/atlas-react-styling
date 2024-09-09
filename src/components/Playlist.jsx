@@ -1,16 +1,16 @@
 import React from 'react';
 
 const songs = [
-    { title: "Painted in Blue", artist: "Soul Canvas", duration: "5:55" },
-    { title: "Tidal Drift", artist: "Echoes of the Sea", duration: "8:02" },
-    { title: "Fading Shadows", artist: "The Emberlight", duration: "3:01" },
-    { title: "Cosmic Drift", artist: "Solar Flare", duration: "5:01" },
-    { title: "Urban Serenade", artist: "Midnight Groove", duration: "4:54" },
-    { title: "Whispers in the Wind", artist: "Rust & Ruin", duration: "6:13" },
-    { title: "Electric Fever", artist: "Neon Jungle", duration: "8:41" },
-    { title: "Edge of the Abyss", artist: "Steel Horizon", duration: "2:27" },
-    { title: "Golden Haze", artist: "Velvet Waves", duration: "3:15" },
-    { title: "Shatter the Silence", artist: "Thunderclap Echo", duration: "8:22" },
+    { title: "Painted in Blue", artist: "Soul Canvas", genre: "Neo-Soul", duration: "5:55" },
+    { title: "Tidal Drift", artist: "Echoes of the Sea", genre: "Ambient", duration: "8:02" },
+    { title: "Fading Shadows", artist: "The Emberlight", genre: "Alternative Rock", duration: "3:01" },
+    { title: "Cosmic Drift", artist: "Solar Flare", genre: "Psychedelic Rock", duration: "5:01" },
+    { title: "Urban Serenade", artist: "Midnight Groove", genre: "Jazz", duration: "4:54" },
+    { title: "Whispers in the Wind", artist: "Rust & Ruin", genre: "Folk", duration: "6:13" },
+    { title: "Electric Fever", artist: "Neon Jungle", genre: "EDM", duration: "8:41" },
+    { title: "Edge of the Abyss", artist: "Steel Horizon", genre: "Metal", duration: "2:27" },
+    { title: "Golden Haze", artist: "Velvet Waves", genre: "Indie Pop", duration: "3:15" },
+    { title: "Shatter the Silence", artist: "Thunderclap Echo", genre: "Rock", duration: "8:22" },
 ];
 
 export default function Playlist({ onSongSelect }) {
