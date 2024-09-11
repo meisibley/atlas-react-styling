@@ -27,7 +27,7 @@ export default function Playlist({ onSongSelect, currentSong }) {
                     key={song.title}
                     // className="flex justify-between items-center mt-2 hover:bg-purple-300 active:bg-blue-300 cursor-pointer"
                     className={`flex justify-between items-center mt-2 cursor-pointer ${
-                        isSelected ? 'bg-yellow-200' : 'hover:bg-purple-300 active:bg-blue-300'
+                        isSelected ? 'bg-yellow' : 'hover:bg-purple-300 active:bg-blue-300'
                     }`}
                     onClick={() => {
                         console.log(`Song selected: ${song.title}`);
