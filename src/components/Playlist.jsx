@@ -13,16 +13,26 @@ const songs = [
     { title: "Shatter the Silence", artist: "Thunderclap Echo", genre: "Rock", duration: "8:22" },
 ];
 
-export default function Playlist({ onSongSelect }) {
+export default function Playlist({ onSongSelect, currentSong }) {
     return (
       <div className="p-4 bg-gray-light rounded-md">
         <h1 className="text-black text-xl font-bold p-2">Playlist</h1>
         <div className="space-y-2">
-            {songs.map((song, index) => (
+            {songs.map((song) => {
+                const isSelected = currentSong && currentSong.title === song.title;
+                console.log(`Song: ${song.title}, Is Selected: ${isSelected}`);
+
+                return (
                 <div
-                    key={index}
-                    className="flex justify-between items-center mt-2 hover:bg-purple-300 active:bg-blue-300 cursor-pointer"
-                    onClick={() => onSongSelect(song)}
+                    key={song.title}
+                    // className="flex justify-between items-center mt-2 hover:bg-purple-300 active:bg-blue-300 cursor-pointer"
+                    className={`flex justify-between items-center mt-2 cursor-pointer ${
+                        isSelected ? 'bg-yellow-200' : 'hover:bg-purple-300 active:bg-blue-300'
+                    }`}
+                    onClick={() => {
+                        console.log(`Song selected: ${song.title}`);
+                        onSongSelect(song);
+                    }}
                 >
                     <div className="w-1/2">
                         <h2 className="text-black text-md font-semibold pl-2">{song.title}</h2>
@@ -30,7 +40,8 @@ export default function Playlist({ onSongSelect }) {
                     </div>
                     <div className="w-1/2 text-gray font-semibold text-right pr-2">{song.duration}</div>
                 </div>
-            ))}
+                );
+            })}
         </div>
       </div>
     );

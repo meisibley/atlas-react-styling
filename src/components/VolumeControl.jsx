@@ -21,7 +21,7 @@ export default function VolumeControl() {
                 max="100" 
                 value={volume} 
                 onChange={handleVolumeChange} 
-                className="w-full" 
+                className="w-full my-4"
             />
         </div>
     );

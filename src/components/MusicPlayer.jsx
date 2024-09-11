@@ -9,12 +9,14 @@ export default function MusicPlayer({ currentSong, onSongSelect }) {
             <div className="max-w-md mx-auto w-full h-auto md:w-1/2 lg:w-1/2">
                 <CurrentlyPlaying song={currentSong} />
                 <div className="md:hidden lg:hidden">
-                    <Playlist onSongSelect={onSongSelect} />
+                    {/* <Playlist onSongSelect={onSongSelect} /> */}
+                    <Playlist onSongSelect={onSongSelect} currentSong={currentSong} />
                 </div>
             </div>
             <div className="hidden md:block lg:block w-px md:bg-gray lg:bg-gray"></div>
             <div className="hidden max-w-md mx-auto md:block lg:block md:w-1/2 lg:w-1/2">
-                <Playlist onSongSelect={onSongSelect} />
+                {/* <Playlist onSongSelect={onSongSelect} /> */}
+                <Playlist onSongSelect={onSongSelect} currentSong={currentSong} />
             </div>
         </div>
       </div>
