@@ -1,4 +1,5 @@
 import React from 'react';
+import PlaylistItem from './PlayListItem';
 
 const songs = [
     { title: "Painted in Blue", artist: "Soul Canvas", genre: "Neo-Soul", duration: "5:55" },
@@ -23,23 +24,24 @@ export default function Playlist({ onSongSelect, currentSong }) {
                 console.log(`Song: ${song.title}, Is Selected: ${isSelected}`);
 
                 return (
-                <div
-                    key={song.title}
-                    // className="flex justify-between items-center mt-2 hover:bg-purple-300 active:bg-blue-300 cursor-pointer"
-                    className={`flex justify-between items-center mt-2 cursor-pointer ${
-                        isSelected ? 'bg-yellow' : 'hover:bg-purple-300 active:bg-blue-300'
-                    }`}
-                    onClick={() => {
-                        console.log(`Song selected: ${song.title}`);
-                        onSongSelect(song);
-                    }}
-                >
-                    <div className="w-1/2">
-                        <h2 className="text-black text-md font-semibold pl-2">{song.title}</h2>
-                        <p className="text-gray font-semibold pl-2">{song.artist}</p>
-                    </div>
-                    <div className="w-1/2 text-gray font-semibold text-right pr-2">{song.duration}</div>
-                </div>
+                    <PlaylistItem song={song} onSongSelect={onSongSelect} isSelected={isSelected}></PlaylistItem>
+                // <div
+                //     key={song.title + song.artist}
+                //     // className="flex justify-between items-center mt-2 hover:bg-purple-300 active:bg-blue-300 cursor-pointer"
+                //     className={`flex justify-between items-center mt-2 cursor-pointer ${
+                //         isSelected ? 'bg-yellow' : 'hover:bg-purple-300 active:bg-blue-300'
+                //     }`}
+                //     onClick={() => {
+                //         console.log(`Song selected: ${song.title}`);
+                //         onSongSelect(song);
+                //     }}
+                // >
+                //     <div className="w-1/2">
+                //         <h2 className="text-black text-md font-semibold pl-2">{song.title}</h2>
+                //         <p className="text-gray font-semibold pl-2">{song.artist}</p>
+                //     </div>
+                //     <div className="w-1/2 text-gray font-semibold text-right pr-2">{song.duration}</div>
+                // </div>
                 );
             })}
         </div>
